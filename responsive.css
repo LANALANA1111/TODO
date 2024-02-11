@@ -1,0 +1,25 @@
+@media (width>1024px) {
+    body>img {
+        display: none;
+    }
+
+    body {
+        background-image: url(./images/Bitmap.png);
+    }
+
+    .inputdiv {
+        width: 540px;
+    }
+
+    .todo {
+        width: 540px;
+    }
+
+    #input-box {
+        width: 540px;
+    }
+
+    .footer {
+        width: 540px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1>TODO</h1>
+        <img src="./images/Combined Shape.png" alt="" />
+      </div>
+      <div class="inputdiv">
+        <input
+          id="input-box"
+          onkeypress="enterClick(event)"
+          placeholder="Create a new todo…"
+          type="text"
+        />
+      </div>
+      <div class="todo">
+        <div class="todolist">
+          <ul id="list-container">
+            <!-- <li class="checked">lorem</li>
+            <li>lorem</li>
+            <li>lorem</li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <h1 class="whichone">All</h1>
+        <h1 class="whichone">Active</h1>
+        <h1 class="whichone">Completed</h1>
+      </div>
+      <div class="lastone">Drag and drop to reorder list</div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
