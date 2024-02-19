@@ -1,7 +1,10 @@
 let inputBox = document.getElementById("input-box");
+const todolist = document.querySelector("todolist");
 const listContainer = document.getElementById("list-container");
+const todoCount = document.getElementById("span");
 
 function enterClick(event) {
+  let array = []
   if (event.key === "Enter") {
     if (inputBox.value === "") {
       alert("enter something");
@@ -14,8 +17,10 @@ function enterClick(event) {
       li.appendChild(span);
     }
     inputBox.value = "";
-    // saveData();
+    saveData();
   }
+  const main = document.querySelector("main");
+  todoCount.textContent = main.length;
 }
 
 listContainer.addEventListener(
@@ -23,20 +28,23 @@ listContainer.addEventListener(
   function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
-      //   saveData();
+      saveData();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
-      //   saveData();
+      saveData();
     }
   },
   false
 );
 
-// function saveData() {
-//   localStorage.setItem("Data", listContainer.innerHTML);
-// }
+function saveData() {
+  localStorage.setItem("Data", listContainer.innerHTML);
+}
 
-// function showTask(){
-//     listContainer.innerHTML = localStorage.getItem("data")
-// }
-// showTask()
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
+
+
+
